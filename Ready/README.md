@@ -1,15 +1,1 @@
-# Arduino_Xmas_Tree
-This is Arduino project for make christmas tree.
-
-## STEP 1
-### Plan how to make and how to get materials.
-* Make purchase list
-
- ## step 2
- ### Build base
-* Build Arduino Electrical schematics <br />
- Used https://www.tinkercad.com/
-* Drwaing X-mas tree by cad <br />
- Used AutoCad 2021
- 
- 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/23499675/146035266-f58d2056-483f-4be0-b7c6-30f7a9f431b0.gif)
