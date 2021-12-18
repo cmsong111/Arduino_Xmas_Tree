@@ -1,9 +1,9 @@
 ## Which we bought
 
-|Item|How many|Description|
+|Item|ea|Description|
 |---|---|---|
 Arduino uno r3 |1|compatible board
-|AA battery holder|1| DC adapter
+|DC adapter|1| DC adapter|
 |Yellow led| 25 |5pie|
 |Blue led| 10 |5pie|
 |Red led| 15 |5pie|

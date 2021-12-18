@@ -1,4 +1,5 @@
-void tincle()
+// tinkle algorithm
+void slowy()
 {
   int value = 5;
   int value2 = 255;
@@ -11,7 +12,7 @@ void tincle()
     analogWrite(13,value);
     value +=10;
     value2 -=10;
-    delay(300);
+    delay(200);
   }
   value = 255;
   value2 = 5;
@@ -24,12 +25,17 @@ void tincle()
     analogWrite(13,value);
     value -=10;
     value2 +=10;
-    delay(300);
+    delay(200);
   }
 }
 
+
+//arduino setup
 void setup()
 {
+  Serial.begin(9600);
+  randomSeed(analogRead(0));
+
   pinMode(13, OUTPUT);
   pinMode(12, OUTPUT);
   pinMode(11, OUTPUT);
@@ -37,7 +43,19 @@ void setup()
   pinMode(9, OUTPUT);
 }
 
+//main
+int randNumber;
 void loop()
 {
-  tincle();
+  randNumber = random(1);
+  switch (randNumber)
+  {
+  case 0:
+    slowy();
+    break;
+  
+  default:
+    break;
+  }
+  slowy();
 }
