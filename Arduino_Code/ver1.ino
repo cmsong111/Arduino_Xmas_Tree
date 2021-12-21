@@ -1,5 +1,5 @@
 // tinkle algorithm
-void slowy()
+void slowy_odd_even()
 {
   int value = 5;
   int value2 = 255;
@@ -29,7 +29,21 @@ void slowy()
   }
 }
 
-void very_fast()
+void slowy_all()
+{
+  int value = 0;
+  for(int i = 0; i<255; i++)
+  {
+    analogWrite(9,value);
+    analogWrite(10,value);
+    analogWrite(11,value);
+    analogWrite(12,value);
+    analogWrite(13,value);
+    value +=1;
+  }
+}
+
+void very_fast_even_odd()
 {
   int off = 0;
   int on = 255;
@@ -38,14 +52,31 @@ void very_fast()
   analogWrite(11,on);
   analogWrite(12,off);
   analogWrite(13,on);
-  delay(100);
+  delay(150);
   analogWrite(9,off);
   analogWrite(10,on);
   analogWrite(11,off);
   analogWrite(12,on);
   analogWrite(13,off);
-  delay(100);
+  delay(150);
+}
 
+void very_fast_all()
+{
+  int off = 0;
+  int on = 255;
+  analogWrite(9,on);
+  analogWrite(10,on);
+  analogWrite(11,on);
+  analogWrite(12,on);
+  analogWrite(13,on);
+  delay(150);
+  analogWrite(9,off);
+  analogWrite(10,off);
+  analogWrite(11,off);
+  analogWrite(12,off);
+  analogWrite(13,off);
+  delay(150);
 }
 
 
@@ -66,26 +97,39 @@ void setup()
 int randNumber;
 void loop()
 {
-  randNumber = random(2);
+  randNumber = random(3);
   switch (randNumber)
   {
   case 0:
     for(int i = 0; i<10;i++)
     {
-      slowy();
+      slowy_odd_even();
     }
-    
-    break;
+  break;
 
   case 1:
   for(int i = 0; i<10;i++)
     {
-      very_fast();
+      very_fast_even_odd();
     }
-    break;
+  break;
 
-  default:
+  case 2:
+  for(int i = 0; i<10;i++)
+    {
+      slowy_all();
+    }
+  break;
+
+  case 3:
+  for(int i = 0; i<10;i++)
+    {
+      very_fast_all();
+    }
+  break;
+  
+  
+  default: 
     break;
   }
-  slowy();
 }
